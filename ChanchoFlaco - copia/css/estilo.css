@@ -1,0 +1,684 @@
+html, body {
+height: 100%;
+min-height: 80%;
+/* overflow: hidden; */
+font-family: 'Oswald', sans-serif;
+}
+
+.ocultar{
+  display: none !important;
+}
+
+.mostrar{
+  display: initial !important;
+}
+.bolder{
+  font-weight: 800;
+}
+.txt-normal{
+  font-weight: 400 !important;
+}
+/*====================colores====================*/
+
+.black{
+  background-color: black;
+}
+
+ .red{
+        background-color:red;
+      }
+
+.yellow{
+  background-color: yellow;
+}
+
+
+.txt-amarillo{
+  color: #EFAF18;
+}
+
+.txt-blanco{
+  color: white;
+}
+
+.txt-negro{
+  color: black;
+}
+/*====================colores====================*/
+
+
+/* ============================== MENU ===================== */
+
+.barra-menu{
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+}
+
+  .hamburguesa{
+    min-height: 50px;
+    margin-top: 2%;
+      }
+
+  .menu{
+    background-image: url(../img/menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+        
+      }
+
+      .menu-hover{
+    background-image: url(../img/hover-menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+      }
+
+     #menu-contenedor{
+height: 100%;
+min-height: 100%;
+transition: transform 0.3s;
+z-index: 999;
+background-color: white;
+position: absolute;
+top: 0;
+overflow: hidden;
+          }
+
+
+
+      .agregar{
+          min-height: 20%;
+    height:auto !important; /* cross-browser */
+    height: 20%; /* cross-browser */
+    background-image: url(../img/fondo-agregar-menu.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: transform 0.3s;
+      }
+
+  .boton-agregar-menu{
+     padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.botones-menu> .container-fluid {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.botones-menu > .container-fluid >.row> .col-xs-6 {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.gasto-ingreso{
+  transition: transform 0.3s;
+  padding-top: 5%;
+}
+
+/*DESPLEGAR MENU */
+
+.ocultar-menu{
+top: 0;
+left: 0;
+transform: translateX(-100%);
+overflow: hidden;
+}
+
+.mostrar-menu{
+ transform: translatex(0);
+
+}
+
+@media screen and (min-width: 450px){
+.hamburguesa{margin-bottom: 2%;
+}
+}
+
+ .distribucion-menu{
+    margin-top: 4%;
+  }
+
+.btn-gastos{
+   width: 17vw;
+}
+.btn-ingresos{
+   width: 17vw;
+}
+
+  
+
+/* ============================== MENU ===================== */
+
+/* ============== CONTENIDO =========== */
+#contenido{
+position: absolute;
+z-index: 1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+
+/* ============== CONTENIDO =========== */
+/*================== INGRESOS ============== */
+
+#ingresos{
+  background-image: url(../img/fondo-azul.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.campo-texto {
+      background-image: url(../img/campo-texto.png);
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    min-width: 100%;
+    padding: 3%;
+    border: none;
+    font-weight: 700;
+    font-size: 4vw;
+    /* background-size: contain !important; */
+    max-height: 84px;
+    min-height: 40px;
+    /* height: 100px; */
+    /* text-align: -webkit-center; */
+    /* text-orientation: mixed; */
+    padding: 4%;
+}
+
+
+.campo-texto:focus{
+  outline:0px;
+}
+
+.campotexto-grueso{
+    background-image: url(../img/campo-texto-fecha.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color:  transparent !important;
+    width: 100%;
+    height: 75px;
+    min-height: 100%;
+   
+    border: none;
+}
+
+.campotexto-grueso:focus{
+  outline:0px;
+}
+
+.campotexto-categoria{
+    background-image: url(../img/campo-texto-categoria.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color:  transparent !important;
+    width: 100%;
+    height: 75px;
+    min-height: 100%;
+   
+    border: none;
+
+}
+
+.campotexto-categoria:focus{
+  outline:0px;
+}
+
+span#pantalla-ingresos {
+    /*overflow: hidden;*/
+    /*position: fixed;*/
+    width: 100%;
+}
+
+/* ============================== SELECCIONAR CATEGORIA ==================== */
+
+#seleccionar-categoria{
+
+background-image: url(../img/fondo-negro.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat; 
+  height: 100vh;
+
+}
+
+
+#pololos-../img{
+  background-image: url(../img/pololitos.png);
+  width: 80px;
+  height: 80px;
+}
+
+
+
+
+#sueldo-../img{
+  background-image: url(../img/sueldo.png);
+  width: 80px;
+  height: 80px;
+}
+
+#partime-../img{
+  background-image: url(../img/partime.png);
+  width: 80px;
+  height: 80px;
+}
+
+#arriendo-../img{
+  background-image: url(../img/arriendo.png);
+  width: 80px;
+  height: 80px;
+}
+
+#otros-../img{
+  background-image: url(../img/otros.png);
+  width: 80px;
+  height: 80px;
+}
+
+
+.seleccion-categoria>div>input{
+  display: none;
+}
+
+.seleccion-categoria-gastos>div>input{
+  display: none;
+}
+
+.selec-cat-titulo {
+    color: white;
+    font-size: x-large;
+    font-weight: 700;
+    padding-top: 5%;
+}
+
+.select-cat-bajada {
+    color: #cbcbcb;
+    font-size: small;
+    font-weight: 400;
+}
+
+.row.seleccion-categoria {
+    border-bottom: 1px solid;
+    margin-bottom: 2%;
+}
+
+
+
+.input-group-addon:first-child {
+    border-right: 0;
+    font-size: 6vw;
+}
+
+input#categoria-ingresos {
+      font-size: 5vw;
+    font-weight: 700;
+    text-align: -webkit-center;
+    text-align: center;
+    padding: 1%;
+    height: 11vh
+
+}
+
+input#calendar-ingresos {
+      font-size: 5vw;
+    font-weight: 700;
+    text-align: -webkit-center;
+    text-align: center;
+    padding: 1%;
+    height: 11vh
+}
+
+.currencyinput {
+    border: 1px inset #ccc;
+}
+.currencyinput input {
+    border: 0;
+}
+
+
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+   background-color: transparent !important;
+    border-radius:0px !important;
+    position: absolute;
+}
+
+
+.espacio-signo-dolar{
+  padding-left: 15%;
+}
+
+.btn-negro {
+
+    background-image: url(../img/btn-negro.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: contain;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 6vw;
+    height: 8vh;
+    background-color: transparent;
+    
+
+
+
+}
+
+.btn-negro:focus{
+  outline:0px;
+  }
+
+  .distribucion{
+    margin-top: 11%;
+  }
+
+/* ============================== SELECCIONAR CATEGORIA ==================== */
+
+
+
+/*=============================== SELECCIONAR CATEGORIA GASTOS ==================== */
+
+#Arriendo-divi-../img{
+  background-image: url(../img/arriendo.png);
+  width: 80px;
+  height: 80px;
+}
+
+#alimentacion-../img{
+  background-image: url(../img/vestimenta.png);
+  width: 80px;
+  height: 80px;
+}
+
+#locomocion-../img{
+  background-image: url(../img/locomocion.png);
+  width: 80px;
+  height: 80px;
+}
+
+#Tarjetas-../img{
+  background-image: url(../img/credito.png);
+  width: 80px;
+  height: 80px;
+}
+
+#Ocio-../img{
+  background-image: url(../img/ocio.png);
+  width: 80px;
+  height: 80px;
+}
+/*==============================FIN SELECCIONAR GASTOS============ */
+
+
+/* ============================== GASTOS ==================== */
+#gastos{
+background-image: url(../img/fondo-amarillo.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+input.campo-texto-tipogasto {
+    text-align: center;
+}
+
+input#calendar-gastos {
+      font-size: 5vw;
+    font-weight: 700;
+    text-align: -webkit-center;
+    text-align: center;
+    padding: 1%;
+    height: 11vh
+}
+
+.campotexto-categoria-gastos{
+    background-image: url(../img/campo-texto-categoria.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color:  transparent !important;
+    width: 100%;
+    height: 75px;
+    min-height: 100%;
+   
+    border: none;
+
+}
+
+
+#seleccionar-categoria-gastos{
+
+background-image: url(../img/fondo-negro.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*height: 100vh; */
+
+}
+
+input#categoria-gastos {
+    font-size: 5vw;
+    font-weight: 700;
+    text-align: -webkit-center;
+    text-align: center;
+    padding: 1%;
+    height: 11vh;
+}
+/* ============================== GASTOS ==================== */
+
+/*=========================== DICCIONARIO =================== */
+
+#diccionario{
+  background-image: url(../img/fondo-blanco.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat;
+   
+}
+
+#il-diccionario{
+  background-image: url(../img/il-diccionario.png);
+
+}
+
+.btn-abc {
+    width: 10.111% !important;
+    display: inline-block;
+    margin-bottom: 1%;
+    padding: 3%;
+    background-image: url(../img/btn-letra-abc.png);
+    height: 100%;
+    background-size: 100% 100%;
+    text-align: center;
+    color: white;
+}
+
+.btn-abc > a {
+  text-decoration: none;
+  color: white;
+  font-size: 4vw;
+}
+.btn-abc> a:hover{
+color: white;
+}
+
+
+/*=========================== DICCIONARIO =================== */
+
+/*=============================== TRIUNFOS =================*/
+    #triunfos{
+    background-image: url(../img/fondo-amarillo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  .trofeos{
+    color: white;
+  }
+  .inactivo{
+    opacity: .3;
+  }
+/*=============================== TRIUNFOS =================*/
+/*=============================== estadisticas =================*/
+  .agregar-estadisticas{
+          min-height: 20%;
+    height:auto !important; /* cross-browser */
+    height: 20%; /* cross-browser */
+    background-image: url(../img/fondo-amarillo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: transform 0.3s;
+      }
+
+     .saldo{
+      background-image: url(../img/fondo-negro.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 34vh;
+
+      }
+
+.gasto-ingreso-total{
+   background-image: url(../img/fondo-blanco.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 34vh;
+}
+
+.titulos-balance{
+  font-size: 6vw;
+}
+
+.datos-balance{
+    font-size: 8vw;
+
+}
+.ultimo-ingreso{
+ background-image: url(../img/fondo-azul.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 34vh;
+}
+.ultimo-gasto{
+  background-image: url(../img/fondo-rojo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 34vh; 
+}
+
+.estado-financiero{
+  background-image: url(../img/fondo-blanco.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 34vh; 
+}
+/*=============================== estadisticas =================*/
+/* ======================= login ==================== */
+#inicio-sesion{
+  background-image: url(../img/fondo-negro.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#registrarse{
+  background-image: url(../img/fondo-negro.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#recuperar{
+  background-image: url(../img/fondo-rojo.png);
+ background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/* ======================= login ==================== */
+
+/* ======================= Calendario ==================== */
+th.prev {
+    background-image: url(../img/anterior.png);
+    /* width: 1vw !important; */
+    background-size: 100% 100%;
+    /* height: 100vh !important; */
+}
+
+th.prev :hover {
+    background-image: url(../img/anterior.png);
+    /* width: 1vw !important; */
+    background-size: 100% 100%;
+    /* height: 100vh !important; */
+      
+    /* font-size: 200%; */
+}
+
+th.next {
+    background-image: url(../img/siguiente.png);
+    /* width: 1vw !important; */
+    background-size: 100% 100%;
+    /* height: 100vh !important; */
+}
+
+th.next :hover {
+    background-image: url(../img/siguiente.png);
+    /* width: 1vw !important; */
+    background-size: 100% 100%;
+    /* height: 100vh !important; */
+     
+    /* font-size: 200%; */
+}
+
+th.dow {
+    border: black 1px solid !important;
+    background-color: #ffbf2c;
+}
+
+td.old.day {
+    border: 1px solid black !important;
+    /* background-color: red; */
+}
+
+td.day {
+    border: 1px solid black !important;
+    /* background-color: red; */
+}
+
+.datepicker table tr td.active:active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active {
+
+  background-color: transparent; !important;
+  color: black !important;
+}
+
+span.ingr {
+    background-color: green;
+    width: 30%!important;
+    height: 30% !important;
+    /* position: absolute; */
+    display: inline-block !important;
+    border-radius: 87%;
+    overflow: hidden;
+    float: none;
+}
+
+span.gas {
+    background-color: #f70500;
+    width: 30%!important;
+    height: 30% !important;
+    /* position: absolute; */
+    display: inline-block !important;
+    border-radius: 87%;
+    overflow: hidden;
+    float: none;
+}
+
+/* ======================= Calendario ==================== */
