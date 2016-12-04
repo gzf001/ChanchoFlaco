@@ -73,7 +73,7 @@
 				<div class="row">
 					<div class="col-xs-12 txt-blanco txt-normal">
 						<input id="recuerdame" type="radio"> <label for="recuerdame" class="txt-normal" style="font-size: 4.3vw;">Recuerdame</label> 
-						<a href="inc/recuperar.php"><p id="olvidecontraseña-txt" class="pull-right" style="font-size: 4.3vw;">olvide mi contraseña</p></a>
+						<a href="inc/recuperar.php"><span id="olvidecontraseña-txt" class="pull-right" style="font-size: 4.3vw;">olvide mi contraseña</span></a>
 					</div>
 				</div>
 

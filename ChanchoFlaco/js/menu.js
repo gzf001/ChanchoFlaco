@@ -42,9 +42,8 @@ var $this = $(this).parent().find('span');
 }
 
 function limpiarForm(){
-  var formulario = $(".pantalla").find('input.formulario');
+  //var formulario = $(".pantalla").find('input');
 
-formulario.val("");
 }
 
 
@@ -111,10 +110,17 @@ formulario.val("");
 
 $(".ingreso-btn").click(function(event) {
  ocultarPantallasInactivas();
-
 $("#pantalla-ingresos").show();
 mostrarOcultarMenu();
 limpiarForm();
+
+$(".calendario-ingresos").hide();
+$("#seleccionar-categoria").hide();
+  $("#ingresos").show();
+   $(".campotexto-categoria").css('background-image', 'url(img/campo-texto-categoria.png)');
+   if($(".campotexto-categoria").val().length > 0){
+  $(".campotexto-categoria").css('background-image', 'url(img/campo-texto-fecha.png)');
+}
 
 });
 
@@ -127,6 +133,14 @@ limpiarForm();
 $("#pantalla-gasto").show();
 mostrarOcultarMenu();
      ocultarContenido();
+
+ $(".calendario-gastos").hide();
+$("#seleccionar-categoria-gastos").hide();
+  $("#gastos").show();
+  $(".campotexto-categoria-gastos").css('background-image', 'url(img/campo-texto-categoria.png)');
+  if($(".campotexto-categoria-gastos").val().length > 0){
+  $(".campotexto-categoria-gastos").css('background-image', 'url(img/campo-texto-fecha.png)');
+}
 
 });
 
@@ -176,4 +190,15 @@ $(".gasto-btn-estadisticas").click(function(event) {
         ocultarContenido();
 
 });
+
+
+$(".btn-agenda").click(function(event){
+   ocultarPantallasInactivas();
+   limpiarForm();
+  $("#pantalla-agenda").show();
+  mostrarOcultarMenu();
+       ocultarContenido();
+
+});
+
   }); //document ready

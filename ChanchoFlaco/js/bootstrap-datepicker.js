@@ -2,7 +2,11 @@
  * Datepicker for Bootstrap v1.7.0-dev (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+ 
+
  */
+
+
 
 (function(factory){
     if (typeof define === "function" && define.amd) {
@@ -104,11 +108,11 @@
 
 		// Checking templates and inserting
 		if (this._check_template(this.o.templates.leftArrow)) {
-			this.picker.find('.prev').html(this.o.templates.leftArrow);
+			this.picker.find('.prev').html(""/*this.o.templates.leftArrow*/);
 		}
 
 		if (this._check_template(this.o.templates.rightArrow)) {
-			this.picker.find('.next').html(this.o.templates.rightArrow);
+			this.picker.find('.next').html(""/*this.o.templates.rightArrow*/);
 		}
 
 		this._buildEvents();
@@ -1160,8 +1164,8 @@
 		},
 
 		click: function(e){
-			e.preventDefault();
-			e.stopPropagation();
+			//e.preventDefault();
+			//e.stopPropagation();
 
 			var target, dir, day, year, month;
 			target = $(e.target);
@@ -1717,11 +1721,11 @@
 	$.fn.datepicker.Constructor = Datepicker;
 	var dates = $.fn.datepicker.dates = {
 		en: {
-			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			days: ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
+			daysShort: ["Dom", "Lun", "Mar", "Mier", "Jue", "Vier", "Sab"],
+			daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+			months: ["Enero", "Febero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+			monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
 			today: "Today",
 			clear: "Clear",
 			titleFormat: "MM yyyy"
