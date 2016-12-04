@@ -25,11 +25,11 @@ font-family: 'Oswald', sans-serif;
 }
 
  .red{
-        background-color:#b91018;;
+        background-color:red;
       }
 
 .yellow{
-  background-color: #EFAF18;
+  background-color: yellow;
 }
 
 
@@ -43,10 +43,6 @@ font-family: 'Oswald', sans-serif;
 
 .txt-negro{
   color: black;
-}
-
-.txt-rojo{
-  color: #b91018;
 }
 /*====================colores====================*/
 
@@ -250,7 +246,7 @@ background-image: url(../img/fondo-negro.png);
 }
 
 
-#pololos-img{
+#pololos-../img{
   background-image: url(../img/pololitos.png);
   width: 80px;
   height: 80px;
@@ -259,25 +255,25 @@ background-image: url(../img/fondo-negro.png);
 
 
 
-#sueldo-img{
+#sueldo-../img{
   background-image: url(../img/sueldo.png);
   width: 80px;
   height: 80px;
 }
 
-#partime-img{
+#partime-../img{
   background-image: url(../img/partime.png);
   width: 80px;
   height: 80px;
 }
 
-#arriendo-img{
+#arriendo-../img{
   background-image: url(../img/arriendo.png);
   width: 80px;
   height: 80px;
 }
 
-#otros-img{
+#otros-../img{
   background-image: url(../img/otros.png);
   width: 80px;
   height: 80px;
@@ -393,31 +389,31 @@ input#calendar-ingresos {
 
 /*=============================== SELECCIONAR CATEGORIA GASTOS ==================== */
 
-#Arriendo-divi-img{
+#Arriendo-divi-../img{
   background-image: url(../img/arriendo.png);
   width: 80px;
   height: 80px;
 }
 
-#alimentacion-img{
+#alimentacion-../img{
   background-image: url(../img/vestimenta.png);
   width: 80px;
   height: 80px;
 }
 
-#locomocion-img{
+#locomocion-../img{
   background-image: url(../img/locomocion.png);
   width: 80px;
   height: 80px;
 }
 
-#Tarjetas-img{
+#Tarjetas-../img{
   background-image: url(../img/credito.png);
   width: 80px;
   height: 80px;
 }
 
-#Ocio-img{
+#Ocio-../img{
   background-image: url(../img/ocio.png);
   width: 80px;
   height: 80px;
@@ -607,10 +603,6 @@ color: white;
     background-repeat: no-repeat;
     height: 100vh;
 }
-
-span#olvidecontraseña-txt {
-    color: white;
-}
 /* ======================= login ==================== */
 
 /* ======================= Calendario ==================== */
@@ -667,7 +659,7 @@ td.day {
   color: black !important;
 }
 
-.ingr {
+span.ingr {
     background-color: green;
     width: 30%!important;
     height: 30% !important;
@@ -678,7 +670,7 @@ td.day {
     float: none;
 }
 
-.gas {
+span.gas {
     background-color: #f70500;
     width: 30%!important;
     height: 30% !important;
@@ -687,17 +679,6 @@ td.day {
     border-radius: 87%;
     overflow: hidden;
     float: none;
-}
-
-#diadia{
-  background-image: url(../img/fondo-blanco.png);
- background-size: 100% 100%;
-    background-repeat: no-repeat;
-  
-}
-
-.agregar-diadia{
-  background-image: url(../img/fondo-azul.png);
 }
 
 /* ======================= Calendario ==================== */

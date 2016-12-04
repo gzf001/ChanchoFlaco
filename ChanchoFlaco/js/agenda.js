@@ -1,54 +1,30 @@
 $(document).ready(function() {
 
 
-$("#pantalla-agendadia").hide()
-$('#pantalla-agenda').hide();
+ $('#pantalla-agenda').hide();
 
 
-
-
-
-   $('#calendario-agenda').datepicker({
-    startDate: "-1y",
-    todayHighlight: false
-    }).on('changeDate', function(e){
-      $('#fechaDiadia').html(e.format('dd - MM - yyyy'))
-      $("#pantalla-agenda").hide();
-$("#pantalla-agendadia").show()
-
-      return false;
+ $('#calendario-agenda').datepicker({ 
+ autoclose: false
     });
 
+   $('#calendario-agenda').datepicker({
+    startDate: "+1d",
+    todayHighlight: false
+    });
+
+var dia = "#calendario-agenda .datepicker .datepicker-days .table tbody tr td.day";
 
 
-
-$("#calendario-agenda .table-condensed thead tr:nth-child(2)").after('<tr><th colspan="10"><img class="img-responsive center-block"  src="img/estrella-agenda.png" alt=""></th></tr>');
-
+$("#calendario-agenda .datepicker .datepicker-days .table thead tr:nth-child(2)").after('<tr><th colspan="10"><img class="img-responsive center-block"  src="img/estrella-agenda.png" alt=""></th></tr>');
 
 
+$(dia).append('<br><span class="ingr"></span><span class="gas"></span>');
 
-$(".btn-back-diadia").click(function(event) {
-$("#pantalla-agenda").show();
-$("#pantalla-agendadia").hide();
+$("#calendario-agenda .datepicker .datepicker-days .table thead tr:nth-child(2) th.prev").click(function(event) {
+	$(dia).append('<br><span class="ingr"></span><span class="gas"></span>');
 });
 
-
-
-
-$(".gasto-btn-diadia").click(function(event) {
-
-var fechaDiadia = $("#fechaDiadia").html();
-$("#pantalla-agendadia").hide();
-$("#pantalla-gasto").show();
-$('#calendar-gastos').val(fechaDiadia);
-});
-
-$(".ingreso-btn-diadia").click(function(event) {
-	var fechaDiadia = $("#fechaDiadia").html();
-$("#pantalla-agendadia").hide();
-$("#pantalla-ingresos").show();
-$('#calendar-ingresos').val(fechaDiadia);
-});
 
 });
 
