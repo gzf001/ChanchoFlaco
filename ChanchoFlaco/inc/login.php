@@ -78,7 +78,7 @@
 				</div>
 
 				<div class="row distribucion ">
-					<div class="center-block col-xs-5"><button id="btn-registrarse" type="reset" class="btn-negro" onclick="javascript:window.location='/inc/registrarse.php'">Registrarse</button></div>
+					<div class="center-block col-xs-5"><button id="btn-registrarse" type="reset" class="btn-negro" onclick="javascript:window.location='inc/registrarse.php'">Registrarse</button></div>
 					<div class="center-block col-xs-5 pull-right"><button name="login" value="login" id="btn-iniciar" type="submit" class="btn-negro">Iniciar</button></div>
 				</div>  
 			</form>   
