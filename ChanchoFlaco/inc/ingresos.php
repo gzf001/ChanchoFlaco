@@ -43,7 +43,7 @@
 
       
       <div class="row distribucion">
-        <div class="col-xs-5 pull-left" style="padding: 0px; margin-left: 5%;"> <button type="reset" class="btn-negro">Cancelar</button></div>
+        <div class="col-xs-5 pull-left btn-cancelar-ingresos" style="padding: 0px; margin-left: 5%;"> <button type="reset" class="btn-negro">Cancelar</button></div>
         <div class="col-xs-5 pull-left" style="padding: 0px; margin-left: 5%;"> <button type="submit" class="btn-negro">Guardar</button></div>
       </div>
 

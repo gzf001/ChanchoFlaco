@@ -8,10 +8,12 @@
     });
 
    $('#calendario-gastos').datepicker({
-    startDate: "+1d",
+    startDate: "-1y",
     todayHighlight: false
     }).on('changeDate', function(e){
-      $('#calendar-gastos').val(e.format('DD dd M'))
+      $('#calendar-gastos').val(e.format('dd - MM - yyyy'))
+       $(".calendario-gastos").toggle();
+  $("#gastos").show();
 
       return false;
     });
@@ -21,12 +23,7 @@
   $(".calendario-gastos").toggle();
   $("#gastos").hide();
 
-$(".day").click(function(event) {
- 
-  $(".calendario-gastos").toggle();
-  $("#gastos").show();
 
-});
  return false;
 });
 
@@ -50,4 +47,18 @@ var valorradio = $(this).find(':radio');
 
   $("#seleccionar-categoria-gastos").hide();
   $("#gastos").show();
+
 });
+
+$(".btn-cancelar-gastos").click(function(event) {
+
+$("#pantalla-gasto").hide();
+$("#pantalla-estadisticas").show();
+});
+
+$(".cat-gastos").click(function(event) {
+$(".campotexto-categoria-gastos").css('background-image', 'url(img/campo-texto-fecha.png)');
+
+
+});
+
