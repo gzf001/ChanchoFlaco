@@ -48,13 +48,17 @@
           <div class="container">
             <div class="row distribucion">
               <div class="col-xs-10 col-xs-offset-1">
-                <img class="img-responsive" src="../img/3x100.png" alt="">
+                <img class="img-responsive" src="../img/comidas.png" alt="">
               </div>
             </div>
-
-            <div class="row distribucion">
+			<div class="row" style="padding-top: 3%;">
+				<div class="col-xs-12">
+					<img class="img-responsive center-block" src="../img/comida-casera.png" alt="">
+				</div>
+			</div>
+            <div class="row ">
               <div class="col-xs-10 col-xs-offset-1 text-justify texto-normal ">
-                <p class="parrafo-consejo">Compra productos por mayor, ya sea alimentos no perecibles, articulos de aseo, etc. <br>Si bien el gasto inicial será mayor, al transcurso del tiempo ahorrarás dinero.</p>
+                <p class="parrafo-consejo">Prefiere llevar comidas desde tu casa, ya sea desayuno, almuerzo, once o un "tente en pie" de esta forma cubrir tus necesidades alimenticias será más conveniente para tu bolsillo.</p>
               </div>
             </div>
 
@@ -65,20 +69,65 @@
 
 
   <div id="slide-2" class="item  carousel-custom">
-      
-        
-          
-       
+
+  	 <div class="container">
+            <div class="row distribucion">
+              <div class="col-xs-10 col-xs-offset-1">
+                <img class="img-responsive" src="../img/3x100.png" alt="">
+              </div>
+            </div>
+			<div class="row" style="padding-top: 3%;">
+				<div class="col-xs-12">
+					<img class="img-responsive center-block" src="../img/comprapormayor-titulo.png" alt="">
+				</div>
+			</div>
+            <div class="row ">
+              <div class="col-xs-10 col-xs-offset-1 text-justify texto-normal ">
+                <p class="parrafo-consejo">Compra productos por mayor, ya sea alimentos no perecibles, articulos de aseo, etc. Si bien el gasto inicial será mayor, al transcurso del tiempo ahorrarás dinero.</p>
+              </div>
+            </div>
+
+          </div>
+   
+  </div>
+
+  <div id="slide-3" class="item  carousel-custom">
+   
+  </div>
+
+  <div id="slide-4" class="item  carousel-custom">
+   
+  </div>
+
+  <div id="slide-5" class="item  carousel-custom">
+   
+  </div>
+
+  <div id="slide-6" class="item  carousel-custom">
+   
+  </div>
+
+    <div id="slide-7" class="item  carousel-custom">
+   
   </div>
 
 
+
+    <div id="slide-8" class="item  carousel-custom">
+   
+  </div>
+
+
+      <div id="slide-9" class="item  carousel-custom">
+   
+  </div>
 
 <div class="carousel-indicators">
 
     <!--<li data-target="#slidechanchoflaco" data-slide-to="0" class="active"></li>-->
     <!--<li data-target="#slidechanchoflaco" data-slide-to="1"></li>-->
-    <a class="carousel-control left" href="#slidechanchoflaco" data-slide="prev">Anterior</a>
-<a class="carousel-control right" href="#slidechanchoflaco" data-slide="next">Siguiente</a>
+    <a class="carousel-control left" href="#slidechanchoflaco" data-slide="prev"><img class="img-responsive" src="../img/btn-anterior.png" alt> </a>
+<a class="carousel-control right" href="#slidechanchoflaco" data-slide="next"><img class="img-responsive" src="../img/btn-siguiente.png" alt> </a>
 
 </div>
 
