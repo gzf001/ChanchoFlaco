@@ -1,10 +1,5 @@
-$(document).ready(function() {
 
-
-$("#pantalla-agendadia").hide()
-$('#pantalla-agenda').hide();
-
-
+$("#diadia").hide();
 
 
 
@@ -13,43 +8,28 @@ $('#pantalla-agenda').hide();
     todayHighlight: false
     }).on('changeDate', function(e){
       $('#fechaDiadia').html(e.format('dd - MM - yyyy'))
-      $("#pantalla-agenda").hide();
-$("#pantalla-agendadia").show()
+      $(".calendario-agenda").hide();
+$("#diadia").show()
 
       return false;
     });
 
 
 
-
-$("#calendario-agenda .table-condensed thead tr:nth-child(2)").after('<tr><th colspan="10"><img class="img-responsive center-block"  src="img/estrella-agenda.png" alt=""></th></tr>');
-
-
-
-
-$(".btn-back-diadia").click(function(event) {
-$("#pantalla-agenda").show();
-$("#pantalla-agendadia").hide();
-});
-
-
-
-
-$(".gasto-btn-diadia").click(function(event) {
-
+$('body').on('click','.gasto-btn-diadia',function(event) {
 var fechaDiadia = $("#fechaDiadia").html();
-$("#pantalla-agendadia").hide();
-$("#pantalla-gasto").show();
-$('#calendar-gastos').val(fechaDiadia);
-});
-
-$(".ingreso-btn-diadia").click(function(event) {
-	var fechaDiadia = $("#fechaDiadia").html();
-$("#pantalla-agendadia").hide();
-$("#pantalla-ingresos").show();
-$('#calendar-ingresos').val(fechaDiadia);
-});
+window.location="gastos.php?num="+fechaDiadia;
+obtenerVariables();
 
 });
+
+
+$('body').on('click','.ingreso-btn-diadia',function(event) {
+var fechaDiadia = $("#fechaDiadia").html();
+window.location="ingresos.php?num="+fechaDiadia;
+obtenerVariables();
+
+});	
+
 
 

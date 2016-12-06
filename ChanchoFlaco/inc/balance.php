@@ -55,16 +55,17 @@
 
   </head>
   <body>
-		<div id="estadisticas">
+  	<?php  include("menu.php");   ?>
+		<div id="estadisticas" class="contenido">
 			<div class="agregar-estadisticas">
 				<div class="container">
 					<div class="row distribucion-menu">
 						<div class="col-xs-6 text-center gasto-btn-estadisticas">
-							<img class="btn-gastos center-block img-responsive" src="./img/gasto.png" alt="">
+							<a href="gastos.php"><img class="btn-gastos center-block img-responsive" src="../img/gasto.png" alt=""></a>
 							<p  class="txt-blanco" style="font-weight: 800;  font-size: 5vw;">GASTO</p>
 						</div>
 						<div class="col-xs-6  text-center ingreso-btn-estadisticas">
-							<img class="btn-ingresos center-block img-responsive" src="./img/ingreso.png" alt="">
+							<a href="ingresos.php"><img class="btn-ingresos center-block img-responsive" src="../img/ingreso.png" alt=""></a>
 							<p  class="txt-blanco" style="font-weight: 800;  font-size: 5vw;">INGRESO</p>
 						</div>
 					</div>
@@ -73,7 +74,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="saldo col-xs-6">
-						<img class="img-responsive center-block" src="./img/saldo-logotipo.png" alt="" style="padding-top:5%;">
+						<img class="img-responsive center-block" src="../img/saldo-logotipo.png" alt="" style="padding-top:5%;">
 						<div class="text-center bolder txt-amarillo" style="font-size: 4vw; padding-top: 9%;">TU SALDO ES:</div><br/>
 						<?php
 							
@@ -106,13 +107,13 @@
 				</div>
 				<div class="row">
 					<div class=" col-xs-6  ultimo-ingreso">
-						<img class="center-block " src="./img/ultimo-ingreso-titulo.png" alt="" style="width: 43vw; padding-top: 2vh">
+						<img class="center-block " src="../img/ultimo-ingreso-titulo.png" alt="" style="width: 43vw; padding-top: 2vh">
 						<div class="titulos-balance txt-blanco text-center" style="padding-top: 5vh;">ULTIMO INGRESO</div>
 						<div class="text-center bolder" style="font-size: 3vw;">SUELDO</div><br/>
 						<div class="text-center bolder txt-blanco" style="color: white; font-size: 6.5vw; padding-top: 3vh">$1.200.000</div>
 					</div>
 					<div class=" col-xs-6  ultimo-gasto">
-						<img class="center-block " src="./img/ultimo-gasto-titulo.png" alt="" style="width: 43vw; padding-top: 2vh">
+						<img class="center-block " src="../img/ultimo-gasto-titulo.png" alt="" style="width: 43vw; padding-top: 2vh">
 						<div class="titulos-balance txt-blanco text-center" style="padding-top: 5vh;">ULTIMO GASTO</div><br/><br/>
 						<div class="text-center bolder" style="font-size: 3vw;">SUELDO</div>
 						<div class="text-center bolder txt-blanco" style="color: white; font-size: 6.5vw; padding-top: 3vh">$1.200.000</div>
@@ -120,11 +121,17 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 estado-financiero">
-						<img class="center-block img-responsive " src="./img/estado-financiero-titulo.png" alt="" style="; padding-top: 2vh">
+						<img class="center-block img-responsive " src="../img/estado-financiero-titulo.png" alt="" style="; padding-top: 2vh">
 						<div class="text-center txt-negro bolder" style=" font-size: 6.5vw; padding-top: 3vh">SOBREENDEUDADO</div>
 					</div>            
 				</div>
 			</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/menu.js"></script>
   </body>
 </html>

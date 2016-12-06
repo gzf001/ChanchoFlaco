@@ -28,7 +28,17 @@
 
   </head>
   <body>
-	<div id="diadia">
+  	<?php  include("menu.php");   ?>
+
+
+       <div class="container calendario-agenda contenido">
+          	<div class="row">
+           		 <div class="col-xs-12" id="calendario-agenda"></div>
+          	</div>  
+        </div> 
+
+
+	<div id="diadia" class="contenido">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 yellow btn-back-diadia"><a href="#"><img src="../img/flecha-volver.png" alt=""></a><strong style="font-size: 5vw;">Volver</strong></div>
@@ -47,7 +57,7 @@
 			</div>             
 			<div class="row ">
 				<div class="col-xs-12">
-					<img class="img-responsive" src="../img/estrella-diadia.png" alt="">
+					<img class="img-responsive center-block" src="../img/estrella-diadia.png" alt="">
 				</div>
 			</div>
 	   </div>
@@ -124,6 +134,15 @@
 			</div>
 		</div>
 	</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/agenda.js"></script>
   </body>
 </html>
 
