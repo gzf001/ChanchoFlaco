@@ -40,10 +40,11 @@
     <!-- ======================= LOGIN ============================ -->
 
           <!-- iniciar sesion -->
-			
-			<?php  include("inc/login.php");   ?>
-			
-		  <!-- FIN iniciar sesion -->
+
+
+          <span id="pantalla-iniciarsesion">
+              <?php  include("inc/iniciarsesion.php");   ?>
+          </span> <!-- FIN iniciar sesion -->
 
           <!--registrarse  -->
 

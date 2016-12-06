@@ -176,15 +176,4 @@ $(".gasto-btn-estadisticas").click(function(event) {
         ocultarContenido();
 
 });
-
-
-$(".btn-agenda").click(function(event){
-   ocultarPantallasInactivas();
-   limpiarForm();
-  $("#pantalla-agenda").show();
-  mostrarOcultarMenu();
-       ocultarContenido();
-
-});
-
   }); //document ready
