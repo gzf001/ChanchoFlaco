@@ -1,75 +1,83 @@
- $(document).ready(function(){
+$(document).ready(function(){
 
-$(".calendario-ingresos").hide();
-$("#seleccionar-categoria").hide();
+	$(".calendario-ingresos").hide();
+	$("#seleccionar-categoria").hide();
 
-  $('#calendario-ingresos').datepicker({ 
- autoclose: false
+	$('#calendario-ingresos').datepicker({ 
+		autoclose: false
     });
 
-   $('#calendario-ingresos').datepicker({
-    startDate: "-1y",
-    todayHighlight: false
+	$('#calendario-ingresos').datepicker({
+		startDate: "-1y",
+		todayHighlight: false
     }).on('changeDate', function(e){
-      $('#calendar-ingresos').val(e.format('dd - MM - yyyy'))
-  $(".calendario-ingresos").hide();
-  $("#ingresos").show();
+		
+			$('#calendar-ingresos').val(e.format('dd - mm - yyyy'));
+			$(".calendario-ingresos").hide();
+			$("#ingresos").show();
       return false;
     });
 
     $("#calendar-ingresos").click(function(event) {
 
-  $(".calendario-ingresos").show()
-  $("#ingresos").hide();
-});
+		$(".calendario-ingresos").show()
+		$("#ingresos").hide();
+	});
 
     $(".btn-cancelar-ingresos").click(function(event) {
           event.preventDefault();
-    history.back(1);
+		  history.back(1);
     });
 
+    $("#categoria-ingresos").click(function(event) {
+		
+		$(".campotexto-categoria").css('background-image', 'url(../img/campo-texto-fecha.png)');
+		$("#seleccionar-categoria").show();
+		$("#ingresos").hide();
+		$(".calendario-ingresos").hide();
+	});
 
-     $("#categoria-ingresos").click(function(event) {
- $(".campotexto-categoria").css('background-image', 'url(../img/campo-texto-fecha.png)');
-  $("#seleccionar-categoria").show();
-  $("#ingresos").hide();
-$(".calendario-ingresos").hide();
+	$(".seleccion-categoria").click(function(event) {
 
- });
+		var valorradio = $(this).find(':radio');
 
+		valorradio[0].click();
 
-$(".seleccion-categoria").click(function(event) {
+		$("input[name=categoria-ingresos]").val(valorradio.val());
 
-var valorradio = $(this).find(':radio');
+		$("#seleccionar-categoria").hide();
+		
+		$("#ingresos").show();
+	});
 
-  valorradio[0].click();
+	if($(".campotexto-categoria").val().length > 0){
 
- 
-  $("input[name=categoria-ingresos]").val(valorradio.val());
+	 $(".campotexto-categoria").css('background-image', 'url(../img/campo-texto-fecha.png)');
+	}
 
-  $("#seleccionar-categoria").hide();
-  $("#ingresos").show();
-});
+	function obtenerVariables( name ){
 
- if($(".campotexto-categoria").val().length > 0){
-  $(".campotexto-categoria").css('background-image', 'url(../img/campo-texto-fecha.png)');
-}
+	  var regexS = "[\\?&]"+name+"=([^&#]*)";
 
+	  var regex = new RegExp ( regexS );
 
-function obtenerVariables( name ){
-  var regexS = "[\\?&]"+name+"=([^&#]*)";
-  var regex = new RegExp ( regexS );
-  var tmpURL = window.location.href;
-  var results = regex.exec( tmpURL );
-  if( results == null )
-    return"";
-  else
-    return results[1];
-}
+	  var tmpURL = window.location.href;
 
-var valor = obtenerVariables( 'num' );
+	  var results = regex.exec( tmpURL );
 
-$("#calendar-ingresos").val(decodeURI(valor));
+	  if( results == null ){
+		  
+		  return "";	  
+	  }
+	  else{
+		  
+		  return results[1];  
+	  }	  
+	}
+
+	var valor = obtenerVariables( 'num' );
+
+	$("#calendar-ingresos").val(decodeURI(valor));
 
 
 });
