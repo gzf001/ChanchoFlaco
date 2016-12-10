@@ -158,13 +158,13 @@
 					<div class="col-xs-12">  
 						<div class="form-group"> 
 							<span class="input-group-addon">$</span> 
-							<input class="campo-texto espacio-signo-dolar formulario" name="monto" type="number" onKeyPress="return soloNumeros(event)">
+							<input class="campo-texto espacio-signo-dolar formulario" id="monto" name="monto" type="number">
 						</div>
 					</div>
 				</div>
 
 				<div class="row distribucion">
-					<div class="col-xs-5 pull-left btn-cancelar-ingresos" style="padding: 0px; margin-left: 5%;"><button type="reset" class="btn-negro">Cancelar</button></div>
+					<div class="col-xs-5 pull-left btn-cancelar-ingresos" style="padding: 0px; margin-left: 5%;"><button id="cancel" class="btn-negro">Cancelar</button></div>
 					<div class="col-xs-5 pull-left" style="padding: 0px; margin-left: 5%;"><button type="submit" name="save" class="btn-negro">Guardar</button></div>
 				</div>	  
 	
@@ -225,6 +225,7 @@
 	<!-- AQUI VA EL FORM -->
 	</div>
 
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -235,13 +236,6 @@
 	<script src="../js/menu.js"></script>
 	<script src="../js/ingresos.js"></script>
 	
-	<script type="text/javascript">
-		// Solo permite ingresar numeros.
-		function soloNumeros(e){
-			var key = window.Event ? e.which : e.keyCode
-			return (key >= 48 && key <= 57)
-		}
-	</script>
 
   </body>
 </html>

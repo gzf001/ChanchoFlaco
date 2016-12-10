@@ -25,8 +25,8 @@ $(document).ready(function(){
 	});
 
     $(".btn-cancelar-ingresos").click(function(event) {
-          event.preventDefault();
-		  history.back(1);
+		
+		
     });
 
     $("#categoria-ingresos").click(function(event) {
@@ -54,7 +54,13 @@ $(document).ready(function(){
 
 	 $(".campotexto-categoria").css('background-image', 'url(../img/campo-texto-fecha.png)');
 	}
-
+	
+	$("#monto").keypress(function(e) {
+				
+		return (e.charCode >= 48 && e.charCode <= 57) || (e.charCode == 0);
+		
+	});	
+	
 	function obtenerVariables( name ){
 
 	  var regexS = "[\\?&]"+name+"=([^&#]*)";
@@ -78,6 +84,4 @@ $(document).ready(function(){
 	var valor = obtenerVariables( 'num' );
 
 	$("#calendar-ingresos").val(decodeURI(valor));
-
-
 });
