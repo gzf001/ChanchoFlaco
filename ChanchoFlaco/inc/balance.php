@@ -2,9 +2,9 @@
 
 	include_once "../conexion.php";
 	
-	function totalIngresos()
+	function total($ingresoGasto)
 	{
-		$ingresos = "SELECT IFNULL(SUM(ingresoGasto.Monto),0) FROM ingresoGasto INNER JOIN categoria ON categoria.Codigo = ingresoGasto.CategoriaCodigo WHERE Categoria.Ingreso = 1;";
+		$ingresos = "SELECT IFNULL(SUM(ingresoGasto.Monto),0) FROM ingresoGasto INNER JOIN categoria ON categoria.Codigo = ingresoGasto.CategoriaCodigo WHERE Categoria.Ingreso = $ingresoGasto;";
 		
 		$resultadoIngreso = mysql_query($ingresos);
 		
@@ -13,17 +13,16 @@
 		return $totalIngreso[0];
 	}
 	
-	function totalGastos()
+	function ultimo($ingresoGasto)
 	{
-		$gastos = "SELECT IFNULL(SUM(ingresoGasto.Monto),0) FROM ingresoGasto INNER JOIN categoria ON Categoria.Codigo = ingresoGasto.CategoriaCodigo WHERE Categoria.Ingreso = 0;";
+		$resultado = "SELECT categoria.Nombre, ingresoGasto.Monto FROM ingresoGasto INNER JOIN categoria ON categoria.Codigo = ingresoGasto.CategoriaCodigo WHERE categoria.Ingreso = $ingresoGasto ORDER BY ingresoGasto.Id DESC LIMIT 1;";
 		
-		$resultadoGasto = mysql_query($gastos);
+		$auxiliarResultado = mysql_query($resultado);
 		
-		$totalGasto = mysql_fetch_row($resultadoGasto);
+		$resultados = mysql_fetch_row($auxiliarResultado);
 		
-		return $totalGasto[0];
+		return $resultados;
 	}
-	
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -78,7 +77,7 @@
 						<div class="text-center bolder txt-amarillo" style="font-size: 4vw; padding-top: 9%;">TU SALDO ES:</div><br/>
 						<?php
 							
-							$saldo = totalIngresos() - totalGastos();
+							$saldo = total(1) - total(0);
 						
 							echo "<div class='text-center bolder txt-blanco' style='color: white; font-size: 6.5vw;'><span name='saldo'>$saldo.-<span/></div>"
 						?>
@@ -88,7 +87,7 @@
 						
 						<?php
 							
-							$totalGasto = totalGastos();
+							$totalGasto = total(0);
 							
 							echo "<div class='text-center txt-negro bolder datos-balance'>$totalGasto.-</div>"
 						
@@ -98,7 +97,7 @@
 						
 						<?php
 							
-							$totalIngreso = totalIngresos();
+							$totalIngreso = total(1);
 							
 							echo "<div class='text-center txt-negro bolder datos-balance'>$totalIngreso.-</div>"
 						
@@ -109,20 +108,47 @@
 					<div class=" col-xs-6  ultimo-ingreso">
 						<img class="center-block " src="../img/ultimo-ingreso-titulo.png" alt="" style="width: 43vw; padding-top: 2vh">
 						<div class="titulos-balance txt-blanco text-center" style="padding-top: 5vh;">ULTIMO INGRESO</div>
-						<div class="text-center bolder" style="font-size: 3vw;">SUELDO</div><br/>
-						<div class="text-center bolder txt-blanco" style="color: white; font-size: 6.5vw; padding-top: 3vh">$1.200.000</div>
+						<?php
+						
+							$concepto = ultimo(1);
+							
+							echo "<div class='text-center bolder' style='font-size: 3vw;'>$concepto[0]</div><br/><div class='text-center bolder txt-blanco' style='color: white; font-size: 6.5vw; padding-top: 3vh;'>$$concepto[1].-</div>"
+							
+						?>
 					</div>
 					<div class=" col-xs-6  ultimo-gasto">
 						<img class="center-block " src="../img/ultimo-gasto-titulo.png" alt="" style="width: 43vw; padding-top: 2vh">
 						<div class="titulos-balance txt-blanco text-center" style="padding-top: 5vh;">ULTIMO GASTO</div><br/><br/>
-						<div class="text-center bolder" style="font-size: 3vw;">SUELDO</div>
-						<div class="text-center bolder txt-blanco" style="color: white; font-size: 6.5vw; padding-top: 3vh">$1.200.000</div>
+						<?php
+						
+							$concepto = ultimo(0);
+							
+							echo "<div class='text-center bolder' style='font-size: 3vw;'>$concepto[0]</div><div class='text-center bolder txt-blanco' style='color: white; font-size: 6.5vw; padding-top: 3vh'>$$concepto[1].-</div>"
+							
+						?>						
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12 estado-financiero">
 						<img class="center-block img-responsive " src="../img/estado-financiero-titulo.png" alt="" style="; padding-top: 2vh">
-						<div class="text-center txt-negro bolder" style=" font-size: 6.5vw; padding-top: 3vh">SOBREENDEUDADO</div>
+						<?php
+						
+							$saldo = total(1) - total(0);
+							
+							if($saldo > 0)
+							{
+								echo "<div class='text-center txt-negro bolder' style='font-size: 6.5vw; padding-top: 3vh'>SALDO A FAVOR</div>";
+							}
+							elseif($saldo == 0)
+							{
+								echo "<div class='text-center txt-negro bolder' style='font-size: 6.5vw; padding-top: 3vh'>SITUACION EQUILIBRADA</div>";
+							}
+							else
+							{
+								echo "<div class='text-center txt-negro bolder' style='font-size: 6.5vw; padding-top: 3vh'>SOBREENDEUDADO</div>";
+							}																				
+						?>
+						
 					</div>            
 				</div>
 			</div>
