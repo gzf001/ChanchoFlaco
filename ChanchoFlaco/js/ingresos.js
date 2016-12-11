@@ -12,7 +12,7 @@ $(document).ready(function(){
 		todayHighlight: false
     }).on('changeDate', function(e){
 		
-			$('#calendar-ingresos').val(e.format('dd - mm - yyyy'));
+			$('#calendar-ingresos').val(e.format('dd-mm-yyyy'));
 			$(".calendario-ingresos").hide();
 			$("#ingresos").show();
       return false;

@@ -90,7 +90,7 @@
 					
 					$fechaPost = $_POST['date'];
 					
-					$fecha = date("Y-m-d", strtotime($fechaPost));
+					list($dia, $mes, $anio) =  split('[/.-]', $fechaPost);
 					
 					$categoria = $_POST['categoria-gastos'];
 					
@@ -121,7 +121,7 @@
 						$codigoCategoria = 11;
 					}
 			
-					$sql = "INSERT INTO ingresoGasto(Id, CategoriaCodigo, Fecha, Nombre, Monto)VALUES($fila[0] + 1, $codigoCategoria, '$fecha', '$nombre', $monto);";
+					$sql = "INSERT INTO ingresoGasto(Id, CategoriaCodigo, Fecha, Nombre, Monto)VALUES($fila[0] + 1, $codigoCategoria, '$anio-$mes-$dia', '$nombre', $monto);";
 																			
 					mysql_query($sql);
 					

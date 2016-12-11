@@ -82,7 +82,7 @@
 					<div class="col-xs-6 text-right bolder" style="font-size: 6vw;">$1.00000</div>
 				</div>  
 				<div class="row">
-					<div class="col-xs-12"><img  class="img-responsive center-block"src="img/separador-negro.png" alt="" style="opacity:.2;"></div>
+					<div class="col-xs-12"><img class="img-responsive center-block"src="img/separador-negro.png" alt="" style="opacity:.2;"></div>
 				</div>
 				<div class="row distribucion">
 					<div class="col-xs-6">

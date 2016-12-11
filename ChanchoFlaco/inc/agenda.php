@@ -28,15 +28,13 @@
 
   </head>
   <body>
-  	<?php  include("menu.php");   ?>
+	<?php  include("menu.php");?>
 
-
-       <div class="container calendario-agenda contenido">
-          	<div class="row">
-           		 <div class="col-xs-12" id="calendario-agenda"></div>
-          	</div>  
-        </div> 
-
+	<div class="container calendario-agenda contenido">
+		<div class="row">
+			<div class="col-xs-12" id="calendario-agenda"></div>
+		</div>  
+	</div>
 
 	<div id="diadia" class="contenido">
 		<div class="container">
@@ -46,22 +44,21 @@
 			<div class="row">
 				<div class="container">
 					<div class="col-xs-2">
-						<img  class="img-responsive center-block" src="../img/diamante.png" alt="">
+						<img class="img-responsive center-block" src="../img/diamante.png" alt="">
 					</div>
-					<div id="fechaDiadia" class="col-xs-8 text-center bolder" style="font-size: 6vw; padding-top: 2%;">
-					</div>
+					<div id="fechaDiadia" name="fechaDiaDia" class="col-xs-8 text-center bolder" style="font-size: 6vw; padding-top: 2%;"></div>
 					<div class="col-xs-2">
 						<img  class="img-responsive center-block" src="../img/diamante.png" alt="">
 					</div>
 				</div>
 			</div>             
-			<div class="row ">
+			<div class="row">
 				<div class="col-xs-12">
 					<img class="img-responsive center-block" src="../img/estrella-diadia.png" alt="">
 				</div>
 			</div>
-	   </div>
-	    <div class="agregar-diadia distribucion">
+		</div>
+		<div class="agregar-diadia distribucion">
 			<div class="container">
 				<div class="row distribucion-menu">
 					<div class="col-xs-6   text-center gasto-btn-diadia">
@@ -70,80 +67,30 @@
 					</div>
 					<div class="col-xs-6  text-center ingreso-btn-diadia">
 						<img class="btn-ingresos center-block img-responsive" src="../img/ingreso.png" alt="" >
-						<p  class="txt-blanco" style="font-weight: 800;  font-size: 5vw;">INGRESO</p>
+						<p class="txt-blanco" style="font-weight: 800;  font-size: 5vw;">INGRESO</p>
 					</div>
 				</div>
 			</div> 
 		</div>
-		<div class="container">
-			<div class="row distribucion" style="margin-bottom:5%;">
-				<div class="col-xs-12 text-center bolder txt-rojo" style=" font-size: 7vw; ">Gastos</div>
-			</div>
+		<div class="container">			
+			<div id="resultado" />
 			<div class="row">
-				<div class="col-xs-12"><img class="../img-responsive"src="../img/separador-negro.png" alt=""></div>
-			</div>
-			<div id="gastos-diadia">
-				<div class="row distribucion">
-					<div class="col-xs-6">
-						<div class="col-xs-12 text-left bolder" style="font-size: 6vw;">Bebida</div>
-						<div class="col-xs-12 text-left">Alimentos</div>
-					</div>
-					<div class="col-xs-6 text-right bolder" style="font-size: 6vw;">$1.00000</div>
-				</div>  
-				<div class="row">
-					<div class="col-xs-12"><img class="img-responsive center-block"src="../img/separador-negro.png" alt="" style="opacity:.2;"></div>
-				</div>
-				<div class="row distribucion">
-					<div class="col-xs-6">
-					  <div class="col-xs-12 text-left bolder" style="font-size: 6vw;">Bebida</div>
-					  <div class="col-xs-12 text-left">Alimentos</div>
-					</div>
-					<div class="col-xs-6 text-right bolder" style="font-size: 6vw;">$1.00000</div>
-				</div>  
-				<div class="row">
-					<div class="col-xs-12"><img  class="img-responsive center-block"src="../img/separador-negro.png" alt="" style="opacity:.2;"></div>
-				</div>
-			</div>
-			<div class="row distribucion" style="margin-bottom:5%;">
-				<div class="col-xs-12 text-center bolder txt-celeste" style=" font-size: 7vw; ">Ingresos</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12"><img class="img-responsive"src="../img/separador-negro.png" alt=""></div>
-			</div>
-			<div id="gastos-diadia">
-				<div class="row distribucion">
-					<div class="col-xs-6">
-						<div class="col-xs-12 text-left bolder" style="font-size: 6vw;">Bebida</div>
-						<div class="col-xs-12 text-left " >Alimentos</div>
-					</div>
-					<div class="col-xs-6 text-right bolder" style="font-size: 6vw;">$1.00000</div>
-				</div>  
-				<div class="row">
-					<div class="col-xs-12"><img  class="img-responsive center-block"src="../img/separador-negro.png" alt="" style="opacity:.2;"></div>
-				</div>
-				<div class="row distribucion">
-					<div class="col-xs-6">
-					  <div class="col-xs-12 text-left bolder" style="font-size: 6vw;">Bebida</div>
-					  <div class="col-xs-12 text-left">Alimentos</div>
-					</div>
-					<div class="col-xs-6 text-right bolder" style="font-size: 6vw;">$1.00000</div>
-				</div>  
-				<div class="row">
-					<div class="col-xs-12"><img class="img-responsive center-block"src="../img/separador-negro.png" alt="" style="opacity:.2;"></div>
-				</div>
+				<div class="col-xs-12"><img class="img-responsive center-block"src="../img/separador-negro.png" alt="" style="opacity:.2;"></div>
 			</div>
 		</div>
 	</div>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
 
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap-datepicker.min.js"></script>
-    <script src="../js/menu.js"></script>
-    <script src="../js/agenda.js"></script>
-  </body>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-datepicker.min.js"></script>
+	<script src="../js/menu.js"></script>
+	<script src="../js/agenda.js"></script>
+	
+   </body>
 </html>
 
 

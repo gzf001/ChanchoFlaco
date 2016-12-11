@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	$(".calendario-gastos").hide();
 	
+	$(".calendario-gastos").hide();	
 	$("#seleccionar-categoria-gastos").hide();
 
 	$('#calendario-gastos').datepicker({ 
@@ -11,7 +11,8 @@ $(document).ready(function(){
 		startDate: "-1y",
 		todayHighlight: false
 	}).on('changeDate', function(e){
-		$('#calendar-gastos').val(e.format('dd - MM - yyyy'))
+		
+		$('#calendar-gastos').val(e.format('dd-mm-yyyy'))
 		$(".calendario-gastos").hide();
 		$("#gastos").show();
 
