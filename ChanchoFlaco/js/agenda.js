@@ -5,33 +5,15 @@ $('#calendario-agenda').datepicker({
 	todayHighlight: false
 }).on('changeDate', function(e){
 	
-	/*$.ajax({
-		data:  {
-				'date' : e.format('dd-mm-yyyy')
-		},
-		url:   'listaGasto.php',
-		type:  'post',
-		beforeSend: function (){
-			
-			$("#gastos-diadia").html("Procesando, espere por favor...");
-			
-			},
-		success: function (response) {
-			
-			$("#gastos-diadia").html(response);
-			
-			}
-        });*/
-
 	$.ajax({
 		data:  {
 				'date' : e.format('dd-mm-yyyy')
 		},
-		url:   'listaIngreso.php',
+		url:   'lista.php',
 		type:  'post',
 		beforeSend: function (){
 			
-			$("#ingresos-diadia").html("Procesando, espere por favor...");
+			$("#resultado").html("Procesando, espere por favor...");
 			
 		},
 		success: function (response) {
