@@ -503,16 +503,12 @@ input#categoria-gastos {
     background-size: 100% 100%;
     text-align: center;
     color: white;
-}
-
-.btn-abc > a {
-  text-decoration: none;
+      text-decoration: none;
   color: white;
   font-size: 4vw;
 }
-.btn-abc> a:hover{
-color: white;
-}
+
+
 
 
 /*=========================== DICCIONARIO =================== */
