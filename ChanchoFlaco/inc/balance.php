@@ -2,9 +2,9 @@
 
 	include_once "../conexion.php";
 	
-	function total($ingresoGasto)
+	function total($ingresogasto)
 	{
-		$ingresos = "SELECT IFNULL(SUM(ingresoGasto.Monto),0) FROM ingresoGasto INNER JOIN categoria ON categoria.Codigo = ingresoGasto.CategoriaCodigo WHERE Categoria.Ingreso = $ingresoGasto;";
+		$ingresos = "SELECT IFNULL(SUM(ingresogasto.Monto),0) FROM ingresogasto INNER JOIN categoria ON categoria.Codigo = ingresogasto.categoriaCodigo WHERE categoria.Ingreso = $ingresogasto;";
 		
 		$resultadoIngreso = mysql_query($ingresos);
 		
@@ -13,9 +13,9 @@
 		return $totalIngreso[0];
 	}
 	
-	function ultimo($ingresoGasto)
+	function ultimo($ingresogasto)
 	{
-		$resultado = "SELECT categoria.Nombre, ingresoGasto.Monto FROM ingresoGasto INNER JOIN categoria ON categoria.Codigo = ingresoGasto.CategoriaCodigo WHERE categoria.Ingreso = $ingresoGasto ORDER BY ingresoGasto.Id DESC LIMIT 1;";
+		$resultado = "SELECT categoria.Nombre, ingresogasto.Monto FROM ingresogasto INNER JOIN categoria ON categoria.Codigo = ingresogasto.categoriaCodigo WHERE categoria.Ingreso = $ingresogasto ORDER BY ingresogasto.Id DESC LIMIT 1;";
 		
 		$auxiliarResultado = mysql_query($resultado);
 		

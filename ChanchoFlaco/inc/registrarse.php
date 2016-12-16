@@ -29,7 +29,7 @@
 	{
 		if(verificarExistencia($_POST['email']) == 1)
 		{
-			echo '<div class="error">El mail ingresado ya existe.</div>';
+			echo '<div>El mail ingresado ya existe.</div>';
 		}
 		else
 		{
@@ -41,21 +41,21 @@
 			
 			if($_POST['email'] == '')
 			{
-				echo '<div class="error">Debe ingresar el email</div>';
+				echo '<div>Debe ingresar el email</div>';
 				
 				$validacion = 0;
 			}
 			
 			if($_POST['registropass'] == '')
 			{
-				echo '<div class="error">Debe ingresar una contraseña</div>';
+				echo '<div>Debe ingresar una contraseña</div>';
 				
 				$validacion = 0;
 			}
 			
 			if($_POST['hombre'] != 1 and $_POST['mujer'] != 2)
 			{
-				echo '<div class="error">Debe seleccionar el sexo</div>';
+				echo '<div>Debe seleccionar el sexo</div>';
 				
 				$validacion = 0;
 			}
@@ -90,18 +90,18 @@
 		
 				if($edad > 0)
 				{
-					$sql = "INSERT INTO Usuario(Id, SexoCodigo, Email, Edad, Pass)VALUES($fila[0] + 1, $sexoCodigo, '$email', $edad, '$pass');";
+					$sql = "INSERT INTO usuario(Id, SexoCodigo, Email, Edad, Pass)VALUES($fila[0] + 1, $sexoCodigo, '$email', $edad, '$pass');";
 				}
 				else
 				{
-					$sql = "INSERT INTO Usuario(Id, SexoCodigo, Email, Pass)VALUES($fila[0] + 1, $sexoCodigo, '$email', '$pass');";	
+					$sql = "INSERT INTO usuario(Id, SexoCodigo, Email, Pass)VALUES($fila[0] + 1, $sexoCodigo, '$email', '$pass');";	
 				}
 												
 				mysql_query($sql);
 				
-				echo '<div class="error">Registro exitoso, será derivado al inicio de sesión</div>';
+				echo '<div>Registro exitoso, será derivado al inicio de sesión</div>';
 				
-				echo "<meta http-equiv='Refresh' content='1;url=../index.php'>";
+				echo "<meta http-equiv='Refresh' content='10;url=../index.php'>";
 			}
 		}
 	}

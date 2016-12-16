@@ -3,7 +3,7 @@
 error_reporting(E_ALL ^ E_NOTICE);
 //creamos la conexion a la base de datos
 
-require_once "../conexion2.php";
+require_once "../conexion.php";
 $db = new BaseDatos();
 $link=$db->conectar();
 

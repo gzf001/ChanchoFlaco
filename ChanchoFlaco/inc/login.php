@@ -1,18 +1,20 @@
 <?php
-
 	session_start();
+	
 	include_once "conexion.php";
 
-	function verificar_login($email,$password,&$result) {
-		
+	function verificar_login($email,$password,&$result) 
+	{
 		$sql = "SELECT id FROM usuario WHERE Email = '$email' and pass = '$password'";
+
 		$rec = mysql_query($sql);
+
 		$count = 0;
 		
 		while($row = mysql_fetch_object($rec))
 		{				
-			$count++;
-			
+			$count++;		
+
 			$result = $row;
 		}
 
@@ -20,7 +22,6 @@
 		{
 			return 1;
 		}
-
 		else
 		{
 			return 0;
@@ -32,10 +33,11 @@
 		if(isset($_POST['login']))
 		{
 			if(verificar_login($_POST['email'],$_POST['password'],$result) == 1)
-			{
+			{				
 				$_SESSION['userid'] = $result->idusuario;
-										
-				header("location:inc/consejos.php");
+			
+				echo "<meta http-equiv='Refresh' content='0;url=inc/consejos.php'>";
+				/*header("location:inc/consejos.php");*/
 			}
 			else
 			{

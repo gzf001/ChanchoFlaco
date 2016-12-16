@@ -43,28 +43,28 @@
 					
 				if($_POST['gasto-nombre'] == '')
 				{				
-					echo "<div class='error'>Debe ingresar una breve descripción del gasto</div>";
+					echo "<div>Debe ingresar una breve descripción del gasto</div>";
 					
 					$validacion = 0;
 				}
 				
 				if($_POST['date'] == '')
 				{
-					echo "<div class='error'>Debe ingresar la fecha del gasto</div>";
+					echo "<div>Debe ingresar la fecha del gasto</div>";
 					
 					$validacion = 0;
 				}
 				
 				if($_POST['categoria-gastos'] == '')
 				{
-					echo "<div class='error'>Debe seleccionar una categoría</div>";
+					echo "<div>Debe seleccionar una categoría</div>";
 					
 					$validacion = 0;
 				}
 				
 				if($_POST['monto'] == '')
 				{
-					echo "<div class='error'>Debe ingresar el valor del gasto</div>";
+					echo "<div>Debe ingresar el valor del gasto</div>";
 					
 					$validacion = 0;
 				}
@@ -73,14 +73,14 @@
 				
 				if($monto <= 0){
 					
-					echo "<div class='error'>El monto debe ser superior a 0 (cero)</div>";
+					echo "<div>El monto debe ser superior a 0 (cero)</div>";
 					
 					$validacion = 0;
 				}
 				
 				if($validacion == 1)
 				{	
-					$sql = "SELECT MAX(id) FROM ingresoGasto;";
+					$sql = "SELECT MAX(id) FROM ingresogasto;";
 									
 					$resultado = mysql_query($sql);
 
@@ -121,11 +121,11 @@
 						$codigoCategoria = 11;
 					}
 			
-					$sql = "INSERT INTO ingresoGasto(Id, CategoriaCodigo, Fecha, Nombre, Monto)VALUES($fila[0] + 1, $codigoCategoria, '$anio-$mes-$dia', '$nombre', $monto);";
+					$sql = "INSERT INTO ingresogasto(Id, CategoriaCodigo, Fecha, Nombre, Monto)VALUES($fila[0] + 1, $codigoCategoria, '$anio-$mes-$dia', '$nombre', $monto);";
 																			
 					mysql_query($sql);
 					
-					echo '<div class="error">Registro exitoso!!</div>';
+					echo '<div>Registro exitoso!!</div>';
 				}
 			}			
 		?>
